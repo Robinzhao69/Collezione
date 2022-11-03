@@ -1,0 +1,37 @@
+.membership-view{
+    background: #0e0e10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 10rem;
+}
+
+.mx-w{
+    width: 110rem;
+}
+
+.mx-w h1{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+}
+
+.card-con{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+@media screen and (max-width: 40rem){
+    .membership-view{
+        padding: 10rem 5rem;
+    }
+    .mx-w h1{
+        font-size: 2.5rem;
+    }
+}

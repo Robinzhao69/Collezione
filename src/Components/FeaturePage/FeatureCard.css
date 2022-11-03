@@ -1,0 +1,25 @@
+.feature-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.feature-img{
+    height: 5rem;
+    width: 5rem;
+    background: #772ce8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .4rem;
+}
+
+.feature-img svg{
+    font-size: 2rem;
+}
+
+.feature-title{
+    margin-bottom: .7rem;
+}

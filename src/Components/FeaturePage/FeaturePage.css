@@ -1,0 +1,26 @@
+.featurePage{
+    background: #121214;
+    height: 100%;
+    width: 100%;
+    padding: 5rem;
+    color: #fff;
+}
+
+.featurePage h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+
+.feature-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 40.5rem){
+    .feature-con{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
