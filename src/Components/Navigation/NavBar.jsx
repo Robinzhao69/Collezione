@@ -19,6 +19,9 @@ function NavBar() {
             name: 'Over'
         },
         {
+            name: 'Collectie'
+        },
+        {
             name: 'Features'
         },
         {
