@@ -2,7 +2,7 @@ import React from 'react'
 
 function Collectionpage() {
     return (
-        <div>collectionpage</div>
+        <div>collection</div>
     )
 }
 
