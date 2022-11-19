@@ -53,7 +53,7 @@ function NavBar() {
 
             <header>
                 <figure className='navbar-logo'>
-                    <Link to="/Homepage"><SportsEsportsIcon /></Link>
+                    <Link to="/"><SportsEsportsIcon /></Link>
                 </figure>
                 <nav ref={navRef}>
                     {navItemsToBeRendered}

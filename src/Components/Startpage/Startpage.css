@@ -24,7 +24,7 @@
     color: #772ce8;
 }
 
-@media screen and (max-width: 49rem){
+@media screen and (max-width: 490px){
     .text-con{
         display: flex;
         justify-content: center;
