@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from "react-router-dom"
+import Collectionpage from '../../Pages/Collectionpage/Collectionpage';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
@@ -16,35 +18,42 @@ function NavBar() {
 
     const navItems = [
         {
-            name: 'Over'
+            name: 'Over',
+            link: '/Over'
         },
         {
-            name: 'Collectie'
+            name: 'Collectie',
+            link: '/Collection'
         },
         {
-            name: 'Features'
+            name: 'Features',
+            link: '/Features'
         },
         {
-            name: 'Prijs'
+            name: 'Prijs',
+            link: '/Prijs'
         },
         {
-            name: 'Contact'
+            name: 'Contact',
+            link: '/Contact'
         },
     ];
 
     let navItemsToBeRendered = navItems.map(Item => {
         return(
             <li key={Item.name} className='nav-items'>
-                <a href="#" className='nav-links'>{Item.name}</a>
+                <Link to={Item.link} className='nav-links'>{Item.name}</Link>
             </li>
         )
     })
 
     return (
         <>
+            
+
             <header>
                 <figure className='navbar-logo'>
-                    <SportsEsportsIcon />
+                    <Link to="/Homepage"><SportsEsportsIcon /></Link>
                 </figure>
                 <nav ref={navRef}>
                     {navItemsToBeRendered}

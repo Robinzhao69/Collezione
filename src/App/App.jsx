@@ -1,19 +1,19 @@
-import NavBar from '../Components/Navigation/NavBar';
-import Homepage from '../Pages/Homepage/Homepage';
-import Info from '../Components/Info/Info';
-import FeaturePage from '../Components/FeaturePage/FeaturePage';
-import Membership from '../Components/Membership/Membership';
-
+import {Switch, Route} from "react-router-dom"
+import Collectionpage from "../Pages/Collectionpage/Collectionpage"
+import Homepage from "../Pages/Homepage/Homepage"
 import './App.css'
 
 const App = () => {
     return(
         <>
-            <NavBar />
-            <Homepage />
-            <Info />
-            <FeaturePage />
-            <Membership />
+            <Switch>
+                <Route path="/Homepage">
+                    <Homepage />
+                </Route>
+                <Route path="/Collection">
+                    <Collectionpage />
+                </Route>
+            </Switch>
         </>
     )
 }
