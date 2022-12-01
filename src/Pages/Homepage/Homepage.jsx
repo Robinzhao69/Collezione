@@ -14,7 +14,6 @@ function Homepage() {
             <Info />
             <FeaturePage />
             <Membership /> 
-            <p>hallo</p>
         </>
     )
 }
