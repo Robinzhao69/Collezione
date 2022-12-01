@@ -7,12 +7,12 @@ const App = () => {
     return(
         <>
             <Switch>
-                <Route path="/Homepage">
-                    <Homepage />
-                </Route>
                 <Route path="/Collection">
                     <Collectionpage />
                 </Route>
+                <Route path="/">
+                    <Homepage />
+                </Route>     
             </Switch>
         </>
     )

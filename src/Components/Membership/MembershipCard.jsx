@@ -12,6 +12,13 @@ function MembershipCard(props) {
     if(props.extraClass !== undefined){  
         classes += extraClass;
     }
+
+    let buttonClass = "lid-btn";
+    let extraButtonClass = props.extraButtonClass;
+    if(props.extraButtonClass !==undefined){
+        buttonClass += extraButtonClass
+    };
+
     return (
         <div className='membershipCard-con'>
             <figure className='membership-img-con'>
@@ -28,7 +35,7 @@ function MembershipCard(props) {
                         <li>{props.vink4}{props.benefit4}</li>
                     </ul>
                 </div>
-                <button className='lid-btn'>Word nu lid!</button>
+                <button className={buttonClass}>Word nu lid!</button>
             </article>
         </div>
     )
