@@ -5,6 +5,7 @@ function Collectionpage() {
     return (
         <>
             <NavBar />
+            <p>hallo</p>
         </>
     )
 }
