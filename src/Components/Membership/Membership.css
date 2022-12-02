@@ -27,11 +27,11 @@
     gap: 3rem;
 }
 
-@media screen and (max-width: 40rem){
+@media screen and (max-width: 400px){
     .membership-view{
         padding: 10rem 5rem;
     }
     .mx-w h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 }
