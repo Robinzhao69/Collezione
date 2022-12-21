@@ -69,7 +69,8 @@
 }
 
 .lid-btn:hover{
-    opacity: 0.9;
+    cursor: pointer;
+    background: #7023e4;
 }
 
 .lid-btn--special-btn{
@@ -84,6 +85,7 @@
 }
 
 .lid-btn--special-btn:hover{
+    cursor: pointer;
     background: #29292c;
 }
 

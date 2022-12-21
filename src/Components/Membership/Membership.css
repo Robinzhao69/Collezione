@@ -10,7 +10,7 @@
 }
 
 .mx-w{
-    width: 110rem;
+    max-width: 1300px;
 }
 
 .mx-w h1{
