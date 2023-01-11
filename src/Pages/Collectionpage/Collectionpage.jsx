@@ -10,7 +10,7 @@ function Collectionpage() {
     const [productCards, setProductCards] = useState(productsObject)
     const [open, setOpen] = useState(true)
     const [cardClicked, setCardClicked] = useState({})
-    const [editMode, setEditMode] = useState(false)
+    
 
 
     let onCardClicked = (idFromCard) => {

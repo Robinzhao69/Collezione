@@ -1,5 +1,5 @@
 .productsWrapper{
-    padding: 4rem;
+    padding: 0rem 4rem;
 }
 
 
@@ -14,8 +14,10 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    max-height: 90vh;
     gap: 4rem;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .productsList__item{
