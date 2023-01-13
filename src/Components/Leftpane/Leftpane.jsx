@@ -1,48 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
+import InputForm from '../InputForm/InputForm'
 import './Leftpane.css'
 
 
-function Leftpane(props) {
-
-    const [editMode, setEditMode] = useState(false)
-
-    let editButtonClicked = () => {
-        setEditMode(true)
-    }
-
-    let saveButtonClicked = () => {
-        setEditMode(false)
-    }
-
-
-    let info = <>
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
-                </>
-    if(editMode === true){
-       info = <>
-                <section className='info__form--container'>
-                    <input className='info__form' type="text" placeholder='Titel'/> 
-                    <input className='info__form' type="text" placeholder='Omschrijving'/>
-                    <input className='info__form' type="text" placeholder='Prijs'/>
-                </section>            
-              </>
-    }
-
-    let button = <button className='info__btn' onClick={editButtonClicked}>Edit</button>
-    if(editMode === true){
-        button = <button className='info__btn' onClick={saveButtonClicked}>Opslaan</button>
-    }
+function Leftpane(props) {  
     
+    let addClicked = (titleFromInput, descFromInput, priceFromInput) => {
+        props.addButtonClicked(titleFromInput, descFromInput, priceFromInput)    
+    }
+
+    let editClicked = (titleFromInput,descFromInput, priceFormInput) => {
+        props.editButtonClicked(titleFromInput, descFromInput, priceFormInput)
+    }
+
     return (
         <section className='info__wrapper'>
             <div className='img__wrapper'>
                 <img className='info__img' src="/img/forza.jpg" alt="" />
             </div>           
-            {info}
-            {button}
+            <InputForm setAddMode={props.addMode} setEditMode={props.editMode} addButtonClicked={addClicked} editButtonClicked={editClicked} cardClicked={props.onCardClicked}/>
         </section>
     )
 }

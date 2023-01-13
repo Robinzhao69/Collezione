@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NavBar from '../../Components/Navigation/NavBar';
 import Rightpane from '../../Components/Rightpane/Rightpane';
 import Leftpane from '../../Components/Leftpane/Leftpane';
@@ -8,22 +8,61 @@ import './Collectionpage.css'
 
 function Collectionpage() {
     const [productCards, setProductCards] = useState(productsObject)
-    const [open, setOpen] = useState(true)
+    const [addMode, setAddMode] = useState(false)
+    const [editMode, setEditMode] = useState(false)
     const [cardClicked, setCardClicked] = useState({})
-    
+
+    let addButtonClicked = (titleFromInput, descFromInput, priceFromInput) => {
+        let toBeAdded = 
+            {
+                id: productCards.length + 1,
+                title: titleFromInput,
+                description: descFromInput,
+                price: priceFromInput,
+            }
+        
+
+        let copy = [...productCards]
+
+        copy.push(toBeAdded)
+        setProductCards(copy)
+    }
+
+    let editButtonClicked = (titleFromInput, descFromInput, priceFromInput) => {
+        let collectionCards = productCards
+        let newState = collectionCards.map(product => {
+            if(cardClicked.id === product.id){
+                product.title = titleFromInput
+                product.description = descFromInput
+                product.price = priceFromInput
+                return product
+            } else {
+                return product
+            }         
+        })
+        setProductCards(newState)
+    }
 
 
     let onCardClicked = (idFromCard) => {
-        setCardClicked(productCards[idFromCard - 1])
+        if(productCards[idFromCard - 1].title === "Placeholder"){
+            setAddMode(true)
+            setEditMode(false)
+            setCardClicked(productCards[idFromCard - 1])
+            return
+        }
+        setAddMode(false)
+        setEditMode(true)
+        setCardClicked(productCards[idFromCard - 1])  
     }
 
-    
+
     return (
         <>
             <NavBar />
             <article className='dashboard'>
-                <Leftpane />
-                <Rightpane onProductCardClicked={onCardClicked} productCards={productCards} />            
+                <Leftpane addMode={addMode} editMode={editMode} addButtonClicked={addButtonClicked} editButtonClicked={editButtonClicked} onCardClicked={cardClicked} />
+                <Rightpane onProductCardClicked={onCardClicked} productCards={productCards} />
             </article>
             <Footer />
         </>

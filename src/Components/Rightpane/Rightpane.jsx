@@ -10,10 +10,10 @@ function Rightpane(props) {
     }
  
     let productCardsToBeRendered = props.productCards.map(product => {
-        if(product.name === "Placeholder"){
+        if(product.title === "Placeholder"){
             return <Placeholder id={product.id} buttonSymbol="+" buttonText="Voeg product toe" onCardClicked={onCardClicked} />
         }
-        return <ProductCards  key={product.id} id={product.id} name={product.name} productImg={product.img} onCardClicked={onCardClicked}/> 
+        return <ProductCards key={product.id} id={product.id} name={product.title} productImg={product.img} onCardClicked={onCardClicked}/> 
     })
     return (
         <>

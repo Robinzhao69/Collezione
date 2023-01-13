@@ -1,36 +1,23 @@
 const products = [
     {
         id: 1,
-        name: "Placeholder"
+        title: "Placeholder",
+        description: "Dit is een placeholder",
+        price: "19,99",
     },
     {
         id: 2,
-        name: "Apple"
+        title: "Apple",
+        description: "Appel is lekker",
+        price: "15,99",
     },
     {
         id: 3,
-        name: "Bike"
+        title: "fiets",
+        description: "fietsen",
+        price: "199,99",
     },
-    {
-        id: 4,
-        name: "Bike"
-    },
-    {
-        id: 5,
-        name: "Bike"
-    },
-    {
-        id: 6,
-        name: "Bike"
-    },
-    {
-        id: 7,
-        name: "Bike"
-    },
-    {
-        id: 8,
-        name: "Bike"
-    },
+    
 ]
 
 export default products

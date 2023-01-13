@@ -6,8 +6,8 @@ function ProductCards(props) {
 
     const productCardClicked = () => {
         props.onCardClicked(props.id);
-        console.log(props.id)
     }
+
     
     return (
         <li onClick={productCardClicked} className="productsList__item productsList__item--gray">
