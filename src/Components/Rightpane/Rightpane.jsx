@@ -9,7 +9,7 @@ function Rightpane(props) {
         props.onProductCardClicked(idFromCard)
     }
  
-    let productCardsToBeRendered = props.productCards.map(product => {
+    let productCardsToBeRendered = props.productCards.filter(product => product.category?.includes(props.filter)).map(product => {
         if(product.title === "Placeholder"){
             return <Placeholder id={product.id} buttonSymbol="+" buttonText="Voeg product toe" onCardClicked={onCardClicked} />
         }

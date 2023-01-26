@@ -16,6 +16,12 @@
     color: #fff;
 }
 
+.info__form--desc{
+    resize: none;
+    height: 20rem;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 .info__form:focus {
     outline: 0.2rem solid #772ce8;
 }

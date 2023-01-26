@@ -5,18 +5,22 @@ import Leftpane from '../../Components/Leftpane/Leftpane';
 import Footer from '../../Components/Footer/Footer';
 import productsObject from '../../data/products';
 import './Collectionpage.css'
+import FilterBar from '../../Components/FilterBar/FilterBar';
 
 function Collectionpage() {
     const [productCards, setProductCards] = useState(productsObject)
     const [addMode, setAddMode] = useState(false)
     const [editMode, setEditMode] = useState(false)
+    const [filters, setFilters] = useState("All")
     const [cardClicked, setCardClicked] = useState({})
+
 
     let addButtonClicked = (titleFromInput, descFromInput, priceFromInput) => {
         let toBeAdded = 
             {
                 id: productCards.length + 1,
                 title: titleFromInput,
+                category: ["All"],
                 description: descFromInput,
                 price: priceFromInput,
             }
@@ -60,9 +64,10 @@ function Collectionpage() {
     return (
         <>
             <NavBar />
+            <FilterBar onChange={setFilters} />
             <article className='dashboard'>
                 <Leftpane addMode={addMode} editMode={editMode} addButtonClicked={addButtonClicked} editButtonClicked={editButtonClicked} onCardClicked={cardClicked} />
-                <Rightpane onProductCardClicked={onCardClicked} productCards={productCards} />
+                <Rightpane filter={filters} onProductCardClicked={onCardClicked} productCards={productCards} />
             </article>
             <Footer />
         </>
