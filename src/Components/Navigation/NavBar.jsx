@@ -26,6 +26,10 @@ function NavBar() {
             link: '/Collection'
         },
         {
+            name: 'Backlog',
+            link: '/Backlog'
+        },
+        {
             name: 'Features',
             link: '/Features'
         },
