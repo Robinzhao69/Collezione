@@ -1,7 +1,7 @@
 .startpage{
     height: 93vh;
     width: 100%;
-    background: url("https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg");
+    background: url("../../../public/img/pexels-photo-3165335.webp");
     object-fit: contain;
     background-size: cover;
 }

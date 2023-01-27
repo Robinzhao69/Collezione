@@ -4,7 +4,7 @@ import './MembershipCard.css'
 function MembershipCard(props) {
     let cardImage = <img src={"/img/" + props.img} alt="" />
     if(props.img === undefined){
-        cardImage = <img className='membership-img' src={"/img/minecraft.jpg"} alt="" />
+        cardImage = <img className='membership-img' src={"/img/minecraft.webp"} alt="" />
     }
 
     let classes = "membership_con";
