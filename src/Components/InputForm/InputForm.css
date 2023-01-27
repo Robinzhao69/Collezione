@@ -31,6 +31,8 @@
     padding: 1.5rem 1rem;
     font-size: 1.7rem;
     font-weight: 600;
+    border-radius: 0.4rem;
+    border: none;
     background: #772ce8;
     color: #fff;
 }
@@ -38,4 +40,10 @@
 .info__btn:hover{
     cursor: pointer;
     background: #7023e4;
+}
+
+@media screen and (max-width: 25rem) {
+    .info__btn{
+        margin: auto;
+    }
 }
