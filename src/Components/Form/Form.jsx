@@ -4,7 +4,7 @@ import { filterGamesByTitle, filterGamesByPlatform } from '../../helpers/filterG
 import { games } from '../../data/games'
 import './Form.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const [inputs, setInputs] = useState([
         {
@@ -48,6 +48,7 @@ const Form = () => {
         inputs.forEach(input => {
             result = input.filter(input.value, result)
         })
+        props.setSearchClicked()
         dispatch({
             type: "FILTEREDGAMES",
             payload: result
