@@ -1,7 +1,12 @@
+import doom from "../../public/img/doom.webp"
+import forza from "../../public/img/forza.webp"
+import minecraft from "../../public/img/minecraft.webp"
+
 const products = [
     {
         id: 1,
         title: "Placeholder",
+        img: "",
         category: ["All"],
         description: "Dit is een placeholder",
         price: "19,99",
@@ -9,6 +14,7 @@ const products = [
     {
         id: 2,
         title: "forza",
+        img: forza,
         category: ["Racing", "All"],
         description: "Auto go vroom",
         price: "15,99",
@@ -16,13 +22,7 @@ const products = [
     {
         id: 3,
         title: "Minecraft",
-        category: ["Sandbox", "All"],
-        description: "Diamond",
-        price: "199,99",
-    },
-    {
-        id: 4,
-        title: "Minecrafyr",
+        img: minecraft,
         category: ["Sandbox", "All"],
         description: "Diamond",
         price: "199,99",

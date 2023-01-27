@@ -4,6 +4,7 @@ import Rightpane from '../../Components/Rightpane/Rightpane';
 import Leftpane from '../../Components/Leftpane/Leftpane';
 import Footer from '../../Components/Footer/Footer';
 import productsObject from '../../data/products';
+import chooseImage from '../../helpers/chooseImage';
 import './Collectionpage.css'
 import FilterBar from '../../Components/FilterBar/FilterBar';
 
@@ -16,9 +17,11 @@ function Collectionpage() {
 
 
     let addButtonClicked = (titleFromInput, descFromInput, priceFromInput) => {
+        let imageFromHelper = chooseImage(titleFromInput)
         let toBeAdded = 
             {
                 id: productCards.length + 1,
+                img: imageFromHelper,
                 title: titleFromInput,
                 category: ["All"],
                 description: descFromInput,
