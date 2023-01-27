@@ -3,29 +3,26 @@ import { useSelector } from 'react-redux'
 
 import React from 'react'
 
-const Display = () => {
+const Display = (props) => {
 
     const filteredGames = useSelector(state => { return state })
-    console.log(filteredGames)
-    let firstToBeRendered = false
-    const titlesToBeRendered = filteredGames.map(game => {
-        if (firstToBeRendered === false) {
-            firstToBeRendered = true
-            return (
-                <section key={game} className='display'>
-                    <h2>{game.title}</h2>
-                </section>
-            )
-        }
-        return (
-            <section key={game} className='display'>
-                <h2>{game.title}</h2>
+    let randIndex
+    let randProduct
+
+    let card = <section key="" className='display'></section>
+
+    if(props.searchClick === true){
+        randIndex = Math.floor(Math.random() * filteredGames.length)
+        randProduct = filteredGames[randIndex]
+        card = 
+            <section key={randProduct?.title} className='display'>
+                <h2>{randProduct?.title}</h2>
             </section>
-        )
-    })
+    }
+  
     return (
         <>
-            {titlesToBeRendered}
+            {card}
         </>
     )
 }
