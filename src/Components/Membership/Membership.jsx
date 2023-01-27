@@ -9,9 +9,9 @@ function Membership() {
             <div className='mx-w'>
                 <h1><span>L</span>idmaatschappen</h1>
                 <div className='card-con'>
-                    <MembershipCard vink={<CheckIcon />} vink2={<CheckIcon />}  img="minecraft.jpg" title="Gratis" text="€0,00 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" />
-                    <MembershipCard extraClass="--special" extraButtonClass="--special-btn" vink={<CheckIcon />} vink2={<CheckIcon />} vink3={<CheckIcon />} img="forza.jpg" title="Basic" text="€5,99 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" benefit3="Early Access inkoop" />
-                    <MembershipCard vink={<CheckIcon />} vink2={<CheckIcon />} vink3={<CheckIcon />} vink4={<CheckIcon />} img="doom.jpg" title="Premium" text="€9,98 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" benefit3="Early Access inkoop" benefit4="Maandelijkse game drop" />
+                    <MembershipCard vink={<CheckIcon />} vink2={<CheckIcon />}  img="minecraft.webp" title="Gratis" text="€0,00 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" />
+                    <MembershipCard extraClass="--special" extraButtonClass="--special-btn" vink={<CheckIcon />} vink2={<CheckIcon />} vink3={<CheckIcon />} img="forza.webp" title="Basic" text="€5,99 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" benefit3="Early Access inkoop" />
+                    <MembershipCard vink={<CheckIcon />} vink2={<CheckIcon />} vink3={<CheckIcon />} vink4={<CheckIcon />} img="doom.webp" title="Premium" text="€9,98 p/m" benefit="24/7 helpdesk" benefit2="Playpoints" benefit3="Early Access inkoop" benefit4="Maandelijkse game drop" />
                 </div>
             </div>
         </section>
