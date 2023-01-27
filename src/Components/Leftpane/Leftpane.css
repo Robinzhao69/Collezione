@@ -17,3 +17,8 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 25rem) {
+    .info__wrapper{
+        padding: 2rem 0.5rem;
+    }
+}

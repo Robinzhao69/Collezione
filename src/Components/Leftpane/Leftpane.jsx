@@ -16,7 +16,7 @@ function Leftpane(props) {
     return (
         <section className='info__wrapper'>
             <div className='img__wrapper'>
-                <img className='info__img' src="/img/forza.jpg" alt="" />
+                <img className='info__img' src="/img/forza.webp" alt="" />
             </div>           
             <InputForm setAddMode={props.addMode} setEditMode={props.editMode} addButtonClicked={addClicked} editButtonClicked={editClicked} cardClicked={props.onCardClicked}/>
         </section>

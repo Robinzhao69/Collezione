@@ -6,3 +6,11 @@
     grid-template-columns: 40% 60%;
     color: #eee;
 }
+
+@media screen and (max-width: 50rem) {
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

@@ -45,7 +45,7 @@ function InputForm(props) {
         <>
             <section className='info__form--container'>
                 <input className='info__form' type="text" value={titleInput} onChange={eventTitleInput} placeholder='Titel' />
-                <input className='info__form' type="text" value={descriptionInput} onChange={eventDescriptionInput} placeholder='Omschrijving' />
+                <textarea className='info__form info__form--desc' type="text" value={descriptionInput} onChange={eventDescriptionInput} placeholder='Omschrijving' />
                 <input className='info__form' type="text" value={priceInput} onChange={eventPriceInput} placeholder='Prijs' />
             </section>
             {button}
