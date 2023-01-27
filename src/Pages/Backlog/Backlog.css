@@ -1,0 +1,12 @@
+.backlogWrapper{
+    background: #1f1f23;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+

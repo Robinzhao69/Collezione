@@ -1,0 +1,26 @@
+.display{
+    margin-bottom: 2rem;
+    width: 30rem;
+    color: white;
+    background: #772ce8;
+    aspect-ratio: 1/1;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    position: relative;
+    animation-name: popup;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes popup{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+    }
+}
