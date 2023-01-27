@@ -3,17 +3,21 @@ import NavBar from '../../Components/Navigation/NavBar';
 import Rightpane from '../../Components/Rightpane/Rightpane';
 import Leftpane from '../../Components/Leftpane/Leftpane';
 import Footer from '../../Components/Footer/Footer';
-import productsObject from '../../data/products';
+import productsObject from '../../data/users';
 import chooseImage from '../../helpers/chooseImage';
 import './Collectionpage.css'
 import FilterBar from '../../Components/FilterBar/FilterBar';
+import { useParams } from 'react-router-dom';
 
 function Collectionpage() {
-    const [productCards, setProductCards] = useState(productsObject)
+    const params = useParams()
+
+    const [productCards, setProductCards] = useState(productsObject[params.id - 1].collection)
     const [addMode, setAddMode] = useState(false)
     const [editMode, setEditMode] = useState(false)
     const [filters, setFilters] = useState("All")
     const [cardClicked, setCardClicked] = useState({})
+
 
 
     let addButtonClicked = (titleFromInput, descFromInput, priceFromInput) => {

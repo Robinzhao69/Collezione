@@ -19,27 +19,27 @@ function NavBar() {
     const navItems = [
         {
             name: 'Over',
-            link: '/Over'
+            link: '/over'
         },
         {
             name: 'Collectie',
-            link: '/Collection'
+            link: '/collection'
         },
         {
             name: 'Backlog',
-            link: '/Backlog'
+            link: '/backlog'
         },
         {
             name: 'Features',
-            link: '/Features'
+            link: '/features'
         },
         {
             name: 'Prijs',
-            link: '/Prijs'
+            link: '/prijs'
         },
         {
             name: 'Contact',
-            link: '/Contact'
+            link: '/contact'
         },
     ];
 
@@ -64,7 +64,9 @@ function NavBar() {
                     <button className='nav-btn nav-close-btn' onClick={showNavbar}>
                         <CloseIcon />
                     </button>
-                    <button className='login'>Login</button>
+                    <Link to="/login">
+                        <button className='login'>Login</button>
+                    </Link>      
                 </nav>  
                 <button className='nav-btn' onClick={showNavbar}>
                     <MenuIcon />
